@@ -68,7 +68,7 @@ The project utilizes four medical datasets from **Kaggle**:
 6. **Deployment** 🌐 - Model integrated into a Flask web app.
 
 ## 🌍 API Endpoints
-![API Endpoints](https://your-image-link.com/api.png)
+
 | Method | Endpoint | Description |
 |--------|---------|-------------|
 | `POST` | `/predict/heart` | Predicts Heart Disease |
