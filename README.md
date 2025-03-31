@@ -44,12 +44,19 @@ python app.py
 http://127.0.0.1:5000/
 ```
 
+## 💂️ Project Web App Images
+Here are some screenshots of the web application:
+
+![Web App Home](./Flask-Web-Application/images/1.png)
+![Prediction Page](./Flask-Web-Application/images/2.png)
+![Results Page](./Flask-Web-Application/images/3.png)
+
 ## 📂 Dataset Information
 The project utilizes four medical datasets from **Kaggle**:
-1. **Heart Disease Dataset** ❤️ - [Download Here](https://www.kaggle.com/datasets/your-heart-disease-dataset)
-2. **Kidney Disease Dataset** 🩸 - [Download Here](https://www.kaggle.com/datasets/your-kidney-disease-dataset)
-3. **Liver Disease Dataset** 🏥 - [Download Here](https://www.kaggle.com/datasets/your-liver-disease-dataset)
-4. **Diabetes Dataset** 🧑‍⚕️ - [Download Here](https://www.kaggle.com/datasets/your-diabetes-dataset)
+1. **Heart Disease Dataset** ❤️ - [Download Here](https://www.kaggle.com/code/syedali110/heart-disease-detection/input)
+2. **Kidney Disease Dataset** 🩸 - [Download Here](https://www.kaggle.com/code/niteshyadav3103/chronic-kidney-disease-prediction-98-accuracy/input?select=kidney_disease.csv)
+3. **Liver Disease Dataset** 🏥 - [Download Here](https://www.kaggle.com/datasets/rabieelkharoua/predict-liver-disease-1700-records-dataset/data)
+4. **Diabetes Dataset** 🧑‍⚕️ - [Download Here](https://www.kaggle.com/datasets/akshaydattatraykhare/diabetes-dataset)
 
 ## 🎯 Methodology
 
@@ -75,7 +82,7 @@ Pull requests are welcome! For significant changes, please open an issue first t
 ## 🐝 License
 This project is licensed under the **MIT License**.
 
-## 📧 Contact
+## 💎 Contact
 For queries, reach out to **Jitesh Shelke** 👨‍💻 on GitHub: [@JiteshShelke](https://github.com/JiteshShelke)
 
 ---
