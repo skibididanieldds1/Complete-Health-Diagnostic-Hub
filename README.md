@@ -47,7 +47,8 @@ http://127.0.0.1:5000/
 ## 💂️ Project Web App Images
 Here are some screenshots of the web application:
 
-![Web App Home](./images/1.png)
+![Web App Home](./images/home.png)
+![Web first](./images/1.png)
 ![Prediction Page](./images/2.png)
 ![Results Page](./images/3.png)
 
