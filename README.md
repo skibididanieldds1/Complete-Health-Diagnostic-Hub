@@ -1,6 +1,6 @@
 # Complete Health Diagnostic Hub 🏥💡
 
-![Health Diagnostic](./Flask-Web-Application/images/chatgpt-banne.png)
+![Health Diagnostic](./images/chatgpt-banne.png)
 
 Welcome to the **Complete Health Diagnostic Hub** 🏥, a machine-learning-based system designed to predict the likelihood of heart disease, kidney disease, liver disease, and diabetes using advanced classification algorithms. 🚀
 
@@ -47,9 +47,9 @@ http://127.0.0.1:5000/
 ## 💂️ Project Web App Images
 Here are some screenshots of the web application:
 
-![Web App Home](./Flask-Web-Application/images/1.png)
-![Prediction Page](./Flask-Web-Application/images/2.png)
-![Results Page](./Flask-Web-Application/images/3.png)
+![Web App Home](./images/1.png)
+![Prediction Page](./images/2.png)
+![Results Page](./images/3.png)
 
 ## 📂 Dataset Information
 The project utilizes four medical datasets from **Kaggle**:
