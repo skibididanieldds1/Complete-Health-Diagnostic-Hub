@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Disease Predictor</title>
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  
+  <style>
+    html {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Website Title */
+    .container {
+      padding: 30px;
+      position: relative;
+      background: linear-gradient(to bottom left, #00ccff 0%, #ff66ff 100%);
+      background-size: 500% 500%;
+      animation: change-gradient 10s ease-in-out infinite;
+    }
+
+    @keyframes change-gradient {
+      0% {
+        background-position: 0 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
+    }
+
+    .container-heading {
+      margin: 0;
+    }
+
+    .heading_font {
+      color: hsl(0, 0%, 100%);
+      font-family: 'Pacifico', cursive;
+      font-size: 45px;
+      font-weight: normal;
+    }
+
+    .description p {
+      color: hsl(0, 0%, 100%);
+      font-style: italic;
+      font-size: 20px;
+      margin: -5px 0 0;
+    }
+
+    /* Model Comparison */
+    .model-comparison {
+      margin: 30px auto;
+      width: 80%;
+      max-width: 800px;
+      font-size: 18px;
+      color: hsl(0, 0%, 100%);
+      text-align: left;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .model-comparison h3 {
+      margin: 0 0 10px 0;
+      font-size: 24px;
+    }
+
+    /* Form Section */
+    .ml-container {
+      margin: 30px 0;
+      flex: 1 0 auto;
+    }
+
+    form {
+      display: inline-block;
+      text-align: left;
+    }
+
+    label {
+      display: inline-block;
+      width: 250px;
+      font-weight: bold;
+      text-align: left;
+      padding: 8px 0;
+    }
+
+    input[type=text], select {
+      width: calc(100% - 260px);
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid hsl(207, 93%, 17%);
+      border-radius: 4px;
+      box-sizing: border-box;
+      vertical-align: middle;
+    }
+
+    /* Predict Button */
+    .my-cta-button {
+      background: #f9f9f9;
+      border: 2px solid #000000;
+      border-radius: 1000px;
+      box-shadow: 3px 3px #8c8c8c;
+      margin-top: 10px;
+      padding: 10px 36px;
+      color: #000000;
+      display: block;
+      font: italic bold 25px/1 "Calibri", sans-serif;
+      text-align: center;
+      width: 100%;
+    }
+
+    .my-cta-button:hover {
+      color: #141414;
+      border: 2px solid #46424b;
+    }
+
+    .my-cta-button:active {
+      box-shadow: 0 0;
+    }
+
+    /* Contact */
+    .contact-icon {
+      color: #ffffff;
+      padding: 7px;
+    }
+
+    .contact-icon:hover {
+      color: #8c8c8c;
+    }
+
+    /* Footer */
+    .footer {
+      flex-shrink: 0;
+      position: relative;
+      padding: 20px;
+      background: linear-gradient(to bottom left, #00ccff 0%, #ff66ff 100%);
+      background-size: 500% 500%;
+      animation: change-gradient 10s ease-in-out infinite;
+    }
+
+    .footer-description {
+      color: #ffffff;
+      margin: 0;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Website Title -->
+  <div class="container">
+    <h2 class='container-heading'><span class="heading_font">Heart Disease Predictor</span></h2>
+    <div class='description'>
+      <p>A Machine Learning Web Application that predicts the chances of having heart disease or not, built with Flask.</p><br>
+    </div>
+    <!-- Model Comparison -->
+    <div class="model-comparison">
+      <h3>Model Comparison:</h3>
+      <p><strong>Logistic Regression:</strong> 79%</p>
+      <p><strong>K-Nearest Neighbors:</strong> 83%</p>
+      <p><strong>Decision Tree:</strong> 99%</p>
+      <p><strong>Random Forest:</strong> 99%</p>
+      <p><strong>Support Vector Machine:</strong> 84%</p>
+    </div>
+  </div>
+
+  <!-- Form Section -->
+  <div class="ml-container">
+    <form action="/predict-heart" method="POST">
+
+      <label for="model">Choose a model:</label>
+      <select name="model" id="model" required="required">
+        <option selected>----select option----</option>
+        <option value="Logistic Regression">Logistic Regression</option>
+        <option value="K-Nearest Neighbors">K-Nearest Neighbors</option>
+        <option value="Decision Tree">Decision Tree</option>
+        <option value="Random Forest">Random Forest</option>
+        <option value="Support Vector Machine">Support Vector Machine</option>
+      </select><br>
+
+      <label for="cp">Chest Pain Type:</label>
+      <select id="cp" name="cp" required="required">
+        <option value="0">Typical Chest Pain</option>
+        <option value="1">Unusual Chest Pain</option>
+        <option value="2">Non-anginal Pain</option>
+        <option value="3">No Chest Pain</option>
+      </select><br>
+
+      <label for="trestbps">Resting Blood Pressure (in mm Hg):</label>
+      <input type="text" id="trestbps" name="trestbps" placeholder="Enter resting blood pressure" required="required"><br>
+
+      <label for="chol">Cholesterol Level (in mg/dl):</label>
+      <input type="text" id="chol" name="chol" placeholder="Enter cholesterol level" required="required"><br>
+
+      <label for="thalach">Max Heart Rate Achieved:</label>
+      <input type="text" id="thalach" name="thalach" placeholder="Enter max heart rate achieved" required="required"><br>
+
+      <label for="exang">Exercise-Induced Angina:</label>
+      <select id="exang" name="exang" required="required">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select><br>
+
+      <label for="oldpeak">ST Depression:</label>
+      <input type="text" id="oldpeak" name="oldpeak" placeholder="Enter ST depression" required="required"><br>
+
+      <label for="slope">Slope of ST Segment:</label>
+      <select id="slope" name="slope" required="required">
+        <option value="0">Upsloping</option>
+        <option value="1">Flat</option>
+        <option value="2">Downsloping</option>
+      </select><br>
+
+      <label for="ca">Number of Major Vessels:</label>
+      <select id="ca" name="ca" required="required">
+        <option value="0">0 Vessels</option>
+        <option value="1">1 Vessel</option>
+        <option value="2">2 Vessels</option>
+        <option value="3">3 Vessels</option>
+        <option value="4">4 Vessels</option>
+      </select><br>
+
+      <label for="thal">Thalassemia Type:</label>
+      <select id="thal" name="thal" required="required">
+        <option value="0">Normal</option>
+        <option value="1">Fixed Defect</option>
+        <option value="2">Reversible Defect</option>
+      </select><br>
+
+      <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class='footer'>
+    <div class="contact">
+      <a target="_blank" href="https://github.com/JiteshShelke/Machine-Learning-Algorithms"><i
+          class="fab fa-github fa-lg contact-icon"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/jitesh-shelke-702745286//"><i
+          class="fab fa-linkedin fa-lg contact-icon"></i></a>
+    </div>
+    <p class='footer-description'>Made by Jitesh Shelke.</p>
+  </div>
+
+</body>
+
+</html>

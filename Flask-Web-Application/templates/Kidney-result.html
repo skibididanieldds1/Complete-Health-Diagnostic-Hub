@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Disease Predictor</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='kidney-favicon.ico') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Website Title */
+        .container {
+            padding: 30px;
+            position: relative;
+            background: linear-gradient(to bottom left, #00ccff 0%, #ff66ff 100%);
+            background-size: 500% 500%;
+            animation: change-gradient 10s ease-in-out infinite;
+        }
+
+        @keyframes change-gradient {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+        .container-heading {
+            margin: 0;
+        }
+
+        .heading_font {
+            color: hsl(0, 0%, 100%);
+            font-family: 'Pacifico', cursive;
+            font-size: 45px;
+            font-weight: normal;
+        }
+
+        .description p {
+            color: hsl(0, 0%, 100%);
+            font-style: italic;
+            font-size: 20px;
+            margin: -5px 0 0;
+        }
+
+        /* Result Section */
+        .results {
+            margin: 30px 0;
+            flex: 1 0 auto;
+            font-size: 25px;
+        }
+
+        .danger {
+            color: red;
+            font-weight: bold;
+        }
+
+        .safe {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            flex-shrink: 0;
+            position: relative;
+            padding: 20px;
+            background: linear-gradient(to bottom left, #00ccff 0%, #ff66ff 100%);
+            background-size: 500% 500%;
+            animation: change-gradient 10s ease-in-out infinite;
+        }
+
+        .footer-description {
+            color: #ffffff;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        /* Contact */
+        .contact-icon {
+            color: #ffffff;
+            padding: 7px;
+        }
+
+        .contact-icon:hover {
+            color: #8c8c8c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Website Title -->
+    <div class="container">
+        <h2 class='container-heading'><span class="heading_font">Kidney Disease Predictor</span></h2>
+        <div class='description'>
+            <p>A Machine Learning Web App, Built with Flask.</p>
+        </div>
+    </div>
+
+    <!-- Result -->
+    <div class="results">
+        {% if prediction == 1 %}
+            <h1>Prediction: <span class='danger'>Oops! You have Chances of Kidney Disease.</span></h1>
+        {% elif prediction == 0 %}
+            <h1>Prediction: <span class='safe'>Great! You DON'T have Chances of Kidney Disease.</span></h1>
+        {% endif %}
+    </div>
+
+    <!-- Footer -->
+    <div class='footer'>
+        <div class="contact">
+            <a target="_blank" href="https://github.com/JiteshShelke/Machine-Learning-Algorithms"><i class="fab fa-github fa-lg contact-icon"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/jitesh-shelke-702745286"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+        </div>
+        <p class='footer-description'>Made by Jitesh Shelke.</p>
+    </div>
+
+</body>
+</html>
