@@ -20,7 +20,7 @@ Welcome to the **Complete Health Diagnostic Hub** 🏥, a machine-learning-based
 - **Joblib, Pickle** 🔄 (Model Serialization)
 
 ## 🛠️ Setup & Installation
-![Setup](https://your-image-link.com/setup.png)
+
 ```bash
 # Clone the repository
 git clone https://github.com/JiteshShelke/Complete-Health-Diagnostic-Hub.git
@@ -35,7 +35,7 @@ pip install -r requirements.txt
 ```
 
 ## 🚀 How to Run
-![Running App](https://your-image-link.com/running.png)
+
 ```bash
 # Run the Flask app
 python app.py
@@ -52,7 +52,7 @@ The project utilizes four medical datasets from **Kaggle**:
 4. **Diabetes Dataset** 🧑‍⚕️ - [Download Here](https://www.kaggle.com/datasets/your-diabetes-dataset)
 
 ## 🎯 Methodology
-![Methodology](https://your-image-link.com/methodology.png)
+
 1. **Data Collection** 💞 - Datasets sourced from Kaggle.
 2. **Data Preprocessing** 🛠️ - Handling missing values, encoding, and scaling.
 3. **Feature Selection** 🔍 - Key attributes selected based on medical relevance.
